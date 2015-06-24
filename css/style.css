@@ -6,6 +6,10 @@
 
 /* Posts */
 
+#posts {
+	text-align: center;
+}
+
 .post {
 	position: relative;
 	display: inline-block;
@@ -31,8 +35,15 @@ h2.vox-post-title {
 	font-weight: normal;
 	margin: 0px;
 	padding: 16px;
-	text-align: center;
 	color: white;
+}
+
+.voz-post-image {
+	width: 100%;
+	height: 100%;
+	
+	background-size: cover;
+	background-position: center;
 }
 
 /* Colors  */
