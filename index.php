@@ -21,6 +21,9 @@
     <![endif]-->
   </head>
   <body>
+	<!-- This is the overlay DIV that is displayed while loading a new page -->
+	<div id="loader"></div> 
+	
     <div class="container">
 		<header>
 			header
@@ -34,7 +37,7 @@
 			section > special
 		</section>
 		
-		<section id="posts">
+		<section id="scroll-container">
 			<div class="post">
 				<h2 class="vox-post-title vox-color-entretenimiento">El secreto de Adaline, excelente para ver con tu pareja</h2>
 				<div class="voz-post-image" style="background-image: url('http://placehold.it/250x250?text=imagen');"></div>
@@ -53,6 +56,17 @@
 			</div>
 		</section>
 	</div>
+	
+	<!-- These are all the links that can be loaded. -->
+	<div id="pages">
+		<a href="./index.html"></a>
+		<a href="./page2.html"></a>
+		<a href="./page3.html"></a>
+		<a href="./page4.html"></a>
+		<a href="./page5.html"></a>
+		<a href="./page6.html"></a>
+	</div>
+	
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
