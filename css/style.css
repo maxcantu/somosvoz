@@ -58,6 +58,9 @@ h2.vox-post-title {
     background-color: #FFFFFF;
 }
 
+#pages {
+    display: none;
+}
 
 /* Colors  */
 

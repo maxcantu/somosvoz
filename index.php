@@ -59,17 +59,19 @@
 	
 	<!-- These are all the links that can be loaded. -->
 	<div id="pages">
-		<a href="./index.html"></a>
-		<a href="./page2.html"></a>
-		<a href="./page3.html"></a>
-		<a href="./page4.html"></a>
-		<a href="./page5.html"></a>
-		<a href="./page6.html"></a>
+		<a href="./index.php"></a>
+		<a href="rwm_infinite_scroll/page2.html"></a>
+		<a href="rwm_infinite_scroll/page3.html"></a>
+		<a href="rwm_infinite_scroll/page4.html"></a>
+		<a href="rwm_infinite_scroll/page5.html"></a>
+		<a href="rwm_infinite_scroll/page6.html"></a>
 	</div>
 	
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- JS -->
+    <script src="js/script.js"></script>
   </body>
 </html>
