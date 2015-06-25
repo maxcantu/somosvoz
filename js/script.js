@@ -44,6 +44,12 @@ jQuery(document).ready(function() {
 					$('#loader').fadeOut('slow', function() {
 						$('#scroll-container').append(data).fadeIn(999);
 						current=position;
+						// Isotope JS
+						$('#scroll-container').isotope({
+						  // options
+						  itemSelector: '.post',
+						  layoutMode: 'fitRows'
+						});
 					});
 				});
 			});
