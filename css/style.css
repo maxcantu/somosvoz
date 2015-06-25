@@ -6,10 +6,6 @@
 
 /* Posts */
 
-#scroll-container {
-	text-align: center;
-}
-
 .post {
 	display: inline-block;
 	vertical-align: middle;
