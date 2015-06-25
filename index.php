@@ -36,7 +36,7 @@
 		section > special
 	</section>
 		
-	<section id="scroll-container" data-isotope-options='{ "itemSelector": ".post", "layoutMode": "fitRows" }'>
+	<section id="scroll-container" class="js-isotope" data-isotope-options='{ "itemSelector": ".post", "layoutMode": "fitRows" }'>
 		<div class="post">
 			<h2 class="vox-post-title vox-color-entretenimiento">El secreto de Adaline, excelente para ver con tu pareja</h2>
 			<div class="voz-post-image" style="background-image: url('http://placehold.it/250x250?text=imagen');"></div>
