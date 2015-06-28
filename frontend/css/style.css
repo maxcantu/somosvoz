@@ -3,11 +3,104 @@
 	Author: Max Cantu
 */
 
+/* 
+	//////////////////
+		Section: Header
+		Style: header
+	//////////////////
+*/
 
-/* Posts */
+header {
+	margin-top: 20px;
+}
+
+
+/* 
+	//////////////////
+		Section: Navbar
+		Style: nav
+	//////////////////
+*/
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+nav ul > li {
+	display: inline;
+	margin: 20px
+}
+
+nav ul > li > a {
+	width: 80px;
+	height: 80px;
+	display: inline-block;
+}
+
+/* Menu */
+
+.voz-mundo {
+	background-size: 80% 80%;
+	background-image: url("../img/beta2/mundo.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.voz-entretenimiento {
+	background-size: 80% 80%;
+	background-image: url("../img/beta2/entretenimiento.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.voz-cultura {
+	background-size: 80% 80%;
+	background-image: url("../img/beta2/cultura.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.voz-economia {
+	background-size: 80% 80%;
+	background-image: url("../img/beta2/economia.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.voz-pensamiento {
+	background-size: 80% 80%;
+	background-image: url("../img/beta2/pensamiento.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.voz-ciencia {
+	background-size: 80% 80%;
+	background-image: url("../img/beta2/ciencia.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.voz-deportes {
+	background-size: 80% 80%;
+	background-image: url("../img/beta2/deportes.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* 
+	//////////////////
+		Section: Posts
+		Style: section #scroll-container
+	//////////////////
+*/
 
 #scroll-container {
 	text-align: center;
+	margin: 0 auto;
 }
 
 .post {
@@ -45,6 +138,8 @@ h2.vox-post-title {
 	background-position: center;
 }
 
+/* Infinite Scroll */
+
 #loader {
     display: none;
     position: fixed;
@@ -63,18 +158,41 @@ h2.vox-post-title {
 
 /* Colors  */
 
+.vox-color-mundo {
+	background-color: #0099FF;
+}
+
+.vox-color-entretenimiento {
+	background-color: #C90000;
+}
+
 .vox-color-cultura {
 	background-color: #9966CC;
 }
 
-.vox-color-mundo {
-	background-color: #0099FF;
+.vox-color-economia {
+	background-color: #009900;
+}
+
+.vox-color-pensamiento {
+	background-color: #333333;
 }
 
 .vox-color-ciencia-y-tecnologia {
 	background-color: #FF6600;
 }
 
-.vox-color-entretenimiento {
-	background-color: #C90000;
+.vox-color-deportes {
+	background-color: #FFCC00;
+}
+
+/* Inside Posts (MODAL) */
+
+#voz-article-single-page-anchor {
+	font-size: 14px;
+	font-weight: normal;
+}
+
+#voz-article-single-page-anchor:hover {
+	text-decoration: none;
 }

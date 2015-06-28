@@ -1,10 +1,39 @@
 /******************************************
-	Infinite jQuery Scroll
-	@author Fabio Mangolini
-	http://www.responsivewebmobile.com
+	Script
 ******************************************/
+
 jQuery(document).ready(function() {
-	//location.href = 'index.html#start';
+	
+	/*
+		------------------------
+			Isotope
+		------------------------
+	*/
+	
+	// Initialize the isotope (grid and filters)
+	var $container = $('#scroll-container');
+	$container.isotope({
+		// options
+		itemSelector: '.vox-item',
+		masonry: {
+			columnWidth: 270,
+			isFitWidth: true
+		}
+	});
+	// filter items when filter link is clicked
+	$('#filters a').click(function(){
+	  var selector = $(this).attr('data-filter');
+	  $container.isotope({ filter: selector });
+	  return false;
+	});
+	
+	/*
+		------------------------
+			Infinite Scroll
+		------------------------
+	*/
+	
+	// Variables
 	var pages = new Array(); //key value array that maps the pages. Ex. 1=>page2.html, 2=>page3.html
 	var current = 0; //the index of the starting page. 0 for index.html in this case
 	var loaded = new Array(); //key value array to prevent loading a page more than once
@@ -42,11 +71,52 @@ jQuery(document).ready(function() {
 			$('#loader').fadeIn('slow', function() {
 				$.get(pages[position], function(data) {
 					$('#loader').fadeOut('slow', function() {
-						$('#scroll-container').append(data).fadeIn(999);
+						$('#scroll-container').isotope( 'insert', $(data) );
 						current=position;
 					});
 				});
 			});
 		}
 	}
+	
+	/*
+		------------------------
+			Modal
+		------------------------
+	*/
+	
+	$( ".vox-item" ).on( "click", function() {
+		// pull the data from each post
+		var url = $(this).data('url');
+		// define the modal div
+		var modal = $('#myModal');
+		
+		// Set the URL of the article to the link of the modal
+		modal.find('#voz-article-single-page-anchor').attr("href", url);
+		
+		// This function creates the iframe for the article
+		// removes the old iframe of the article
+		$("#voz-article-iframe").remove();
+		// create the new iframe
+		$(".modal-body").append("<iframe id='voz-article-iframe' src='' frameborder='0' scrolling='no' width='100%'></iframe>");
+		// add the url of the iframe
+		$("#voz-article-iframe").attr("src", url + "?post_mode=1");
+		// resize the iframe (height)
+		$("#voz-article-iframe").load(function(){
+			$(this).height($(this).contents().outerHeight());
+		});
+		
+	});
+
+	
+	/*
+		------------------------
+			Tooltips
+		------------------------
+	*/
+	
+	// Initialize all the tooltips
+	$(function () {
+	  $('[data-toggle="tooltip"]').tooltip()
+	})		
 });
